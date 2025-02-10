@@ -65,10 +65,13 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
       Start((Start)) --> input1[\ Write the number \]
       input1 --> verification1{ Number > 0? }
-      verification1 --> |Sim| A[/ Positive /]
-      verification1 --> |Não| verification2{ Number = 0? }
+      verification1 --> |Yes| A[/ Positive /]
+      verification1 --> |No| verification2{ Number = 0? }
+      verification2 --> |Yes| C[/ Neutral /]
+      verification2 --> |No| B[/ Negative /]
       A --> finish([ Fim ])
       B --> finish
+      C --> finish
    ```
    
 5. Desenvolva um fluxograma que leia a idade de uma pessoa e indique se ela pode votar.
