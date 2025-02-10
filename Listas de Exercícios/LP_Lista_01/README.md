@@ -80,8 +80,8 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
        start(( Start )) --> input1[\ Write your age \]
         input1 --> verification1{ Age >= 18? }
-        verification1 --> |Sim| A[/ You can vote /]
-        verification1 --> |Não| B[/ You can't vote /]
+        verification1 --> |Yes| A[/ You can vote /]
+        verification1 --> |No| B[/ You can't vote /]
         A --> finish([ Finish ])
         B --> finish
    ```
@@ -99,6 +99,9 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
        verification1 --> |No| verification2{ x=y ?}
        verification2 --> |Yes| B[/ X is equal to Y /]
        verification2 --> |No| C[/ Y is greater than X /]
+       A --> finish([ Finish ])
+       B --> finish
+       C --> finish
 
    ```
    
