@@ -129,7 +129,16 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      G["Sua resposta aqui!"]
+      Start((Start)) --> input1[\ Write the first number \]
+      input1 --> value1[ Read and set x value ]
+      value1 --> verification1{ x > 0? }
+      verification1 --> |No| A[/ It'snt possible to calculate this number /]
+      verification1 --> |Yes| B[ Calculate x! ]
+      B --> value2[Read x! and set y value]
+      value2 --> C[/ The value is: y /]
+      A --> finish([ Finish ])
+      C --> finish
+
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
