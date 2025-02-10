@@ -50,13 +50,13 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
        Start((Start)) --> input1[\ Write the first number \]
-       input1 --> value1[ Set x value ]
+       input1 --> value1[ Read and set x value ]
        value1 --> input2[\ Write the second number \]
-       input2 --> value2[ Set y value ]
+       input2 --> value2[ Read and set y value ]
        value2 --> sum[ Do the equation x+y ]
        sum --> value3[ Set z value ]
        value3 --> output[/ The value of the sum is: z /]
-       output --> finish([ finish ])
+       output --> finish([ Finish ])
    ```
    
 4. Elabore um fluxograma que leia um número e exiba se ele é positivo ou negativo.
@@ -69,7 +69,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       verification1 --> |No| verification2{ Number = 0? }
       verification2 --> |Yes| C[/ Neutral /]
       verification2 --> |No| B[/ Negative /]
-      A --> finish([ Fim ])
+      A --> finish([ Finish ])
       B --> finish
       C --> finish
    ```
@@ -78,21 +78,51 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      D["Sua resposta aqui!"]
+       start(( Start )) --> input1[\ Write your age \]
+        input1 --> verification1{ Age >= 18? }
+        verification1 --> |Sim| A[/ You can vote /]
+        verification1 --> |Não| B[/ You can't vote /]
+        A --> finish([ Finish ])
+        B --> finish
    ```
    
 6. Crie um fluxograma que leia dois números e determine o maior entre eles.
    
    ```mermaid
    flowchart TD
-      E["Sua resposta aqui!"]
+      Start((Start)) --> input1[\ Write the first number \]
+       input1 --> value1[ Read and set x value ]
+       value1 --> input2[\ Write the second number \]
+       input2 --> value2[ Read and set y value ]
+       value2 --> verification1{ x>y? }
+       verification1 --> |Yes| A[/ X is greater than Y /]
+       verification1 --> |No| verification2{ x=y ?}
+       verification2 --> |Yes| B[/ X is equal to Y /]
+       verification2 --> |No| C[/ Y is greater than X /]
+
    ```
    
 7. Crie um fluxograma que leia três números e determine o maior entre eles.
    
    ```mermaid
    flowchart TD
-      F["Sua resposta aqui!"]
+            Start((Start)) --> input1[\ Write the first number \]
+       input1 --> value1[ Read and set x value ]
+       value1 --> input2[\ Write the second number \]
+       input2 --> value2[ Read and set y value ]
+      value2 --> input3[\ Write the third number \]
+       input3 --> value3[ Read and set z value ]
+       value3 --> verification1{ x > y && z? }
+       verification1 --> |Yes| A[/ X is greater than Y and Z /]
+       verification1 --> |No| verification2{ y > x && z ?}
+       verification2 --> |Yes| B[/ Y is greater than X and Z /]
+       verification2 --> |No| verification3{ x=y=z? }
+       verification3 --> |Yes| C[/ All numbers are the same /]
+       verification3 --> |No| D{ Z is greater than X and Y }
+       A --> finish([ Finish ])
+       B --> finish
+       C --> finish
+       D --> finish
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
