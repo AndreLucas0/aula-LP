@@ -33,21 +33,42 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      A["Sua resposta aqui!"]
+      Start((Start)) --> input1[\ Write your score \]
+      input1 --> verification1{ Score >= 50? }
+      verification1 --> |Yes| input2[\ Write your frequency porcentage \]
+      input2 --> verification2{ Frequency >=75%? }
+      verification2 --> |Yes| A[/ Approve /]
+      verification2 --> |No| B
+      verification1 --> |No| B[/ Disapprove /]
+      A --> finish([ Finish ])
+      B --> finish
+      
    ```
    
 3. Crie um fluxograma para calcular a soma de dois números fornecidos pelo usuário.
    
    ```mermaid
    flowchart TD
-      B["Sua resposta aqui!"]
+       Start((Start)) --> input1[\ Write the first number \]
+       input1 --> value1[ Set x value ]
+       value1 --> input2[\ Write the second number \]
+       input2 --> value2[ Set y value ]
+       value2 --> sum[ Do the equation x+y ]
+       sum --> value3[ Set z value ]
+       value3 --> output[/ The value of the sum is: z /]
+       output --> finish([ finish ])
    ```
    
 4. Elabore um fluxograma que leia um número e exiba se ele é positivo ou negativo.
    
    ```mermaid
    flowchart TD
-      C["Sua resposta aqui!"]
+      Start((Start)) --> input1[\ Write the number \]
+      input1 --> verification1{ Number > 0? }
+      verification1 --> |Sim| A[/ Positive /]
+      verification1 --> |Não| verification2{ Number = 0? }
+      A --> finish([ Fim ])
+      B --> finish
    ```
    
 5. Desenvolva um fluxograma que leia a idade de uma pessoa e indique se ela pode votar.
