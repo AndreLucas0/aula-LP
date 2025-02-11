@@ -79,7 +79,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
        start(( Start )) --> input1[\ Write your age \]
-        input1 --> verification1{ Age >= 18? }
+        input1 --> verification1{ Age >= 16? }
         verification1 --> |Yes| A[/ You can vote /]
         verification1 --> |No| B[/ You can't vote /]
         A --> finish([ Finish ])
