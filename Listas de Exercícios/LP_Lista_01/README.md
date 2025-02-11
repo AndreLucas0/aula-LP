@@ -177,7 +177,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       verification2 --> |No| D{ x:2 = Z+? }
       D --> |Yes| E[/ The number is not prime /]
       D --> |No| F[/ The number is prime /]
-      B --> finish([ Finish ])
+      B --> finish([ Finishiii ])
       C --> finish
       E --> finish
       F --> finish
