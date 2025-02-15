@@ -169,15 +169,8 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
       start(( Start )) --> input1[\ Write the number \]
       input1 --> value1[\ Set x value \]
-      value1 --> verification1{ x:x = 1? }
-      verification1 --> |Yes| A{ x:1 = x? }
-      verification1 --> |No| B[/ The number is not prime /]
-      A --> verification2{ x=2? }
-      verification2 --> |Yes| C[/ The number is prime /]
-      verification2 --> |No| D{ x:2 = Z+? }
-      D --> |Yes| E[/ The number is not prime /]
-      D --> |No| F[/ The number is prime /]
-      B --> finish([ Finish ])
-      C --> finish
-      E --> finish
-      F --> finish
+      value1 --> verification1{ x=2? }
+      verification1 --> |Yes| A[/It's prime/]
+      verification1 --> |No| B{x/2 = y∈Z+?}
+      B --> |Yes| C
+      B --> |No| D
