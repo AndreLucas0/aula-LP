@@ -134,12 +134,16 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
       Start((Start)) --> input1[\ Write the first number \]
       input1 --> value1[ Read and set x value ]
-      value1 --> verification1{ x > 0? }
-      verification1 --> |No| A[/ It'snt possible to calculate this number /]
-      verification1 --> |Yes| B[ Calculate x! ]
-      B --> value2[Read x! and set y value]
-      value2 --> C[/ The value is: y /]
-      A --> finish([ Finish ])
+      value1 --> verification1{ x > 1 and x ∈ Z and x ∈ N ? }
+      verification1 --> |No| A{x == 0 or x == 1?}
+      verification1 --> |Yes| B["set x value and set y = x.(x-1) "]
+      A --> |No| C[/It'snt possible to calculate this number/]
+      A --> |Yes| D[/ x! == 1 /]
+      B --> verification2{x-1 > 1?}
+      verification2 --> B
+      verification2 --> E[/The value of x! is: y/]
+      E --> finish([Finish])
+      D --> finish
       C --> finish
 
    ```
@@ -155,7 +159,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       start(( Start )) --> input1[\ Write the number \]
-        input1 --> value1[\ Set x value \]
+        input1 --> value1[ Set x value ]
         value1 --> verification1{ x % 2 = 1? }
         verification1 --> |Yes| A[/ The number is even /]
         verification1 --> |No| B[/ The number is odd /]
@@ -168,9 +172,15 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    ```mermaid
    flowchart TD
       start(( Start )) --> input1[\ Write the number \]
-      input1 --> value1[\ Set x value \]
-      value1 --> verification1{ x=2? }
-      verification1 --> |Yes| A[/It's prime/]
-      verification1 --> |No| B{x/2 = y∈Z+?}
-      B --> |Yes| C
-      B --> |No| D
+      input1 --> value1[ Set x value ]
+      value1 --> verification1{ x<2? }
+      verification1 --> |Yes| C
+      verification1 --> |No| B[i=x/2]
+      B --> verification2{i>1?}
+      verification2 --> |Yes| verification3{n % i == 0?}
+      verification2 --> |No| E[/It's prime/]
+      verification3 --> |Yes| C[/It's not prime/]
+      verification3 --> |No| D[i=i-1]
+      D --> verification2
+      C --> finish([Finish])
+      E --> finish
