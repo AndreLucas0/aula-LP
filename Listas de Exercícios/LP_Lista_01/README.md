@@ -134,7 +134,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
       Start((Start)) --> input1[\ Write the first number \]
       input1 --> value1[ Read and set x value ]
-      value1 --> verification1{ x > 1 and x ∈ Z and x ∈ N ? }
+      value1 --> verification1{" x > 1 and x ∈ Z and x ∈ N ? "}
       verification1 --> |No| A{x == 0 or x == 1?}
       verification1 --> |Yes| B["set x value and set y = x.(x-1) "]
       A --> |No| C[/It'snt possible to calculate this number/]
