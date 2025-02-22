@@ -134,17 +134,12 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    flowchart TD
       Start((Start)) --> input1[\ Write the first number \]
       input1 --> value1[ Read and set x value ]
-      value1 --> verification1{" x > 1 and x ∈ Z and x ∈ N ? "}
-      verification1 --> |No| A{x == 0 or x == 1?}
+      value1 --> verification1{" n > 1 and n ∈ N ? "}
+      verification1 --> |No| A[Answer = r]
       verification1 --> |Yes| B["r=r*n"]
-      A --> |No| C[/It'snt possible to calculate this number/]
-      A --> |Yes| D[/ x! == 1 /]
+      A --> finish([Finish])
       B --> verification2[n=n-1]
       verification2 --> verification1
-      verification2 --> E[/The value of x! is: y/]
-      E --> finish([Finish])
-      D --> finish
-      C --> finish
 
    ```
    
