@@ -170,9 +170,9 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       input1 --> value1[ Set x value ]
       value1 --> verification1{ x<2? }
       verification1 --> |Yes| C
-      verification1 --> |No| B[i=x/2]
+      verification1 --> |No| B[i=x-1]
       B --> verification2{i>1?}
-      verification2 --> |Yes| verification3{n % i == 0?}
+      verification2 --> |Yes| verification3{x % i == 0?}
       verification2 --> |No| E[/It's prime/]
       verification3 --> |Yes| C[/It's not prime/]
       verification3 --> |No| D[i=i-1]
