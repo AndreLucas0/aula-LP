@@ -136,11 +136,11 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
       input1 --> value1[ Read and set x value ]
       value1 --> verification1{" x > 1 and x ∈ Z and x ∈ N ? "}
       verification1 --> |No| A{x == 0 or x == 1?}
-      verification1 --> |Yes| B["set x value and set y = x.(x-1) "]
+      verification1 --> |Yes| B["r=r*n"]
       A --> |No| C[/It'snt possible to calculate this number/]
       A --> |Yes| D[/ x! == 1 /]
-      B --> verification2{x-1 > 1?}
-      verification2 --> B
+      B --> verification2[n=n-1]
+      verification2 --> verification1
       verification2 --> E[/The value of x! is: y/]
       E --> finish([Finish])
       D --> finish
