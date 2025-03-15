@@ -1,4 +1,4 @@
-![senai_logo](https://transparencia.sp.senai.br/Content/img/logo-senai.png)
+    ![senai_logo](https://transparencia.sp.senai.br/Content/img/logo-senai.png)
 
 # Lista de Exercícios 02: variáveis e operadores lógicos/aritméticos 
 
