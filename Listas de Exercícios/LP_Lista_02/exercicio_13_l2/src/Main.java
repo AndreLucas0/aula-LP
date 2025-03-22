@@ -9,7 +9,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         r = in.nextDouble();
 
-        A = (r*r)*3.14;
+        A = Math.pow(r, 2)*Math.PI;
         System.out.println("A área do círculo é: " + A);
     }
 }
