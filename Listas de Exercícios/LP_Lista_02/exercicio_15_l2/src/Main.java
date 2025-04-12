@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         double r, h, result;
 
-        System.out.println("Escreva o valor do raio do cilindro em m: ");
-        System.out.println("Escreva o valor da altura do cilindro em m: ");
+        System.out.println("Write the value of the radius of the cylinder in m: ");
+        System.out.println("Write the value of the height of the cylinder in m: ");
 
         Scanner in = new Scanner(System.in);
         r = in.nextDouble();
@@ -13,6 +13,6 @@ public class Main {
 
         result = (r*r) * 3.14 * h;
 
-        System.out.println("O valor do volume do cilindro é de: " + result + " m³");
+        System.out.println("The value of the volume of the cylinder is: " + result + " m³");
     }
 }

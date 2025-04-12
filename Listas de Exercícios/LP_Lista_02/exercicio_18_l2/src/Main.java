@@ -6,14 +6,14 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Escreva o valor do coeficiente a: ");
+        System.out.println("Write the value of the coefficient a: ");
         a = in.nextDouble();
 
-        System.out.println("Escreva o valor do coeficiente b: ");
+        System.out.println("Write the value fo the coefficient b: ");
         b = in.nextDouble();
 
         result = -b / a;
-        System.out.println("O valor de x é: " + result);
+        System.out.println("The value of the x is: " + result);
 
     }
 }

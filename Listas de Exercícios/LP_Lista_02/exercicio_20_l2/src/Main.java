@@ -6,14 +6,14 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Escreva o valor de x1: ");
+        System.out.println("Write the value of the x1: ");
         xOne = in.nextDouble();
 
-        System.out.println("Escreva o valor de x2: ");
+        System.out.println("Write the value of the x2: ");
         xTwo = in.nextDouble();
 
         b = -xTwo-xOne;
         c = -xOne*-xTwo;
-        System.out.println("A equação quadrática é: x² + " + b + "x + " + c );
+        System.out.println("The quadratic equation is: x² + " + b + "x + " + c );
     }
 }
