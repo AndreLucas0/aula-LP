@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        int number;
+        number=0;
+
+        for(int i=0; i<50; i++){
+            number+=4;
+            System.out.println(number);
+        }
     }
 }
