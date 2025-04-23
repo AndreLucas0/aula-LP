@@ -60,6 +60,10 @@ public class Main {
                 System.out.println("Área = " + a);
                 System.out.println("Perímetro = " + p);
                 break;
+
+            default:
+                System.out.println("Opção inválida.");
+                break;
         }
     }
 }
