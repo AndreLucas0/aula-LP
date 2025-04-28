@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        int[][] matriz = {{5, 8, 9, 7, 3}, {9, 6, 7, 7, 3}, {2, 3, 4, 7, 3}, {1, 3, 6, 8, 9}, {2, 9, 0, 1, 2}};
+        int[][] matrix = {{5, 8, 9, 7, 3}, {9, 6, 7, 7, 3}, {2, 3, 4, 7, 3}, {1, 3, 6, 8, 9}, {2, 9, 0, 1, 2}};
         int maxLineCalc0 = 0, maxLineCalc1 = 0, maxLineCalc2 = 0, maxLineCalc3 = 0, maxLineCalc4 = 0;
         int maxColumnCalc0 = 0, maxColumnCalc1 = 0, maxColumnCalc2 = 0, maxColumnCalc3 = 0, maxColumnCalc4 = 0;
         for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <= 4; j++) {
                 if (i == 0) {
-                    maxLineCalc0 += matriz[i][j];
+                    maxLineCalc0 += matrix[i][j];
                 } else if (i == 1) {
-                    maxLineCalc1 += matriz[i][j];
+                    maxLineCalc1 += matrix[i][j];
                 } else if (i == 2) {
-                    maxLineCalc2 += matriz[i][j];
+                    maxLineCalc2 += matrix[i][j];
                 } else if (i == 3) {
-                    maxLineCalc3 += matriz[i][j];
+                    maxLineCalc3 += matrix[i][j];
                 } else {
-                    maxLineCalc4 += matriz[i][j];
+                    maxLineCalc4 += matrix[i][j];
                 }
             }
         }
@@ -22,15 +22,15 @@ public class Main {
         for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <= 4; j++) {
                 if (i == 0) {
-                    maxColumnCalc0 += matriz[j][i];
+                    maxColumnCalc0 += matrix[j][i];
                 } else if (i == 1) {
-                    maxColumnCalc1 += matriz[j][i];
+                    maxColumnCalc1 += matrix[j][i];
                 } else if (i == 2) {
-                    maxColumnCalc2 += matriz[j][i];
+                    maxColumnCalc2 += matrix[j][i];
                 } else if (i == 3) {
-                    maxColumnCalc3 += matriz[j][i];
+                    maxColumnCalc3 += matrix[j][i];
                 } else {
-                    maxColumnCalc4 += matriz[j][i];
+                    maxColumnCalc4 += matrix[j][i];
                 }
             }
         }
