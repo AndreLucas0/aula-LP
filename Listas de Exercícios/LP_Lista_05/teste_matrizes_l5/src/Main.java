@@ -6,6 +6,6 @@ public class Main {
         // Declaração com inicialização
         int [][] matriz = {{5,8,9}, {9,6,7}, {2,3,4}};
 
-        System.out.println(matriz[0][1]);
+        System.out.println(matriz[0][0]);
     }
 }
