@@ -5,11 +5,15 @@ public class Main {
         int n, result;
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Insira um número: ");
-        n = in.nextInt();
+
+        do {
+            System.out.println("Insira um número maior que zero: ");
+            n = in.nextInt();
+        } while (n <= 0);
+
 
         result = multNumbers(n);
-        System.out.println("O valor total da soma é: " + result);
+        System.out.println("O valor total do fatorial do número é: " + result);
     }
 
     public static int multNumbers(int x) {

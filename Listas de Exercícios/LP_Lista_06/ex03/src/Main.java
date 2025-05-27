@@ -5,8 +5,10 @@ public class Main {
         int base, power, result;
 
         Scanner in = new Scanner(System.in);
+
         System.out.println("Insira a base da exponenciação: ");
         base = in.nextInt();
+
         System.out.println("Insira a potência da exponenciação: ");
         power = in.nextInt();
 
@@ -15,8 +17,18 @@ public class Main {
     }
 
     public static int numberPow(int x, int y) {
-        if (y == 1)
+        if (y == 1) {
             return x;
+        }
+
+        if (x == 0) {
+            return 0;
+        }
+
+        if (y == 0) {
+            return 1;
+        }
+
         return x * numberPow(x, y-1);
 
         /*int base = x;
